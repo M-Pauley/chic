@@ -1,0 +1,2 @@
+# chic
+Chrome HIstory Comparitor
