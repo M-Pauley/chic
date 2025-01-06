@@ -3,7 +3,8 @@
 # Function to extract Chrome history for a specific user
 extract_chrome_history() {
   local USERNAME="$1"
-  local DATE=$(date +%Y%m%d)
+  local DATE
+  DATE=$(date +%Y%m%d)
 
   # Path to the user's Chrome history file
   HISTORY_FILE="/home/$USERNAME/.config/google-chrome/Default/History"
@@ -15,7 +16,7 @@ extract_chrome_history() {
   fi
 
   # Copy the History file to the current directory and change ownership
-  sudo cp "$HISTORY_FILE" ./chrome_data/History.db && sudo chown $USER:$USER ./chrome_data/History.db
+  sudo cp "$HISTORY_FILE" ./chrome_data/History.db && sudo chown "$USER":"$USER" ./chrome_data/History.db
 
   # Query the SQLite database for the 100 most recent URLs and titles
   # Change DESC LIMIT 100; as needed.

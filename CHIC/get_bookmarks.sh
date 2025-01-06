@@ -3,7 +3,8 @@
 # Function to extract Chrome bookmarks for a specific user
 extract_bookmarks() {
   local USERNAME="$1"
-  local DATE=$(date +%Y%m%d)
+  local DATE
+  DATE=$(date +%Y%m%d)
   
   # Ensure the bookmarks file exists
   BOOKMARKS_FILE="/home/$USERNAME/.config/google-chrome/Default/Bookmarks"
