@@ -10,7 +10,7 @@ This is intended to be run with priveledged accounts on your own systems. It is 
 TLDR: I am not responsible for your actions.
 
 # Screen_Lock
-screen_lock.sh <lock/unlock> <username>
+`screen_lock.sh <lock/unlock> <username>`
 
 Lock or unlock a user account via passwd. If account is being locked, script will also use loginctl to enable the lock screen. This effectivly terminates the user's access without closing any windows or losing any works-in-progress.
 
